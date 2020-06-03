@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <title>QUIZ</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body style="background: black; font-family: Cambria;">
+        <div class="container">
+            <div class="row" style="text-align: center; margin-top: 6%;">
+                <div class="col-md-9">
+                    <div id="start" style="text-align: left;">
+                        <h1>
+                            <span>Premier</span>
+                            <span style="color: palegreen;">League</span>
+                        </h1>
+                        <br /><br /><br />
+                        <div class="button button-1 mx-auto" id="startquiz">
+                            Start &nbsp<span style="color: palegreen;"
+                                >Quiz</span
+                            >
+                        </div>
+                    </div>
+                    <div
+                        style="
+                            border: 1px solid black;
+                            box-shadow: 0 0 10px 5px palegreen;
+                            display: none;
+                        "
+                        id="quizcontainer"
+                    >
+                        <div
+                            id="question"
+                            style="
+                                font-size: 35px;
+                                color: whitesmoke;
+                                border-bottom: 7px solid darkseagreen;
+                                border-radius: 30px;
+                                background-color: black;
+                            "
+                            class="text-focus-in"
+                        ></div>
+                        <br /><br />
+                        <label class="option puff-in-center"
+                            ><input
+                                type="radio"
+                                name="option"
+                                value="1"
+                                id="r1" />
+                            <span
+                                id="op1"
+                                style="color: black; font-size: 25px;"
+                            ></span></label
+                        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <label class="option puff-in-center"
+                            ><input
+                                type="radio"
+                                name="option"
+                                value="2"
+                                id="r2" />
+                            <span
+                                id="op2"
+                                style="color: black; font-size: 25px;"
+                            ></span></label
+                        ><br /><br />
+                        <label class="option puff-in-center"
+                            ><input
+                                type="radio"
+                                name="option"
+                                value="3"
+                                id="r3" />
+                            <span
+                                id="op3"
+                                style="color: black; font-size: 25px;"
+                            ></span></label
+                        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <label class="option puff-in-center"
+                            ><input
+                                type="radio"
+                                name="option"
+                                value="4"
+                                id="r4" />
+                            <span
+                                id="op4"
+                                style="color: black; font-size: 25px;"
+                            ></span
+                        ></label>
+                        <br /><br />
+                        <div>
+                            <button
+                                id="flag"
+                                class="button button-1 bt"
+                                style="border-color: orange;"
+                            >
+                                FLAG
+                            </button>
+                        </div>
+                        <div>
+                            <button
+                                id="prev"
+                                style="display: none; border-color: bisque;"
+                                class="button-1 button bt"
+                            >
+                                &laquo; PREV
+                            </button>
+                            <button
+                                id="next"
+                                class="button button-1 bt"
+                                style="border-color: seagreen;"
+                            >
+                                NEXT &raquo;
+                            </button>
+                        </div>
+                    </div>
+                    <div id="myModal" class="bounce-top" style="display: none;">
+                        <!-- Modal content -->
+                        <div
+                            class="modal-content"
+                            style="
+                                background-color: lightgreen;
+                                margin: auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 70%;
+                            "
+                        >
+                            <span class="close" id="close">&times;</span>
+                            <p id="scoreboard" style="font-size: 40px;">
+                                Some text in the Modal..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <div class="frontfoot bg mx-auto" id="check"></div>
+
+                    <div id="progress" style="display: none; margin-top: 8px;">
+                        <label
+                            id="time"
+                            style="color: red; font-size: 25px;"
+                        ></label
+                        ><br /><br />
+                        <button
+                            id="1"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q1</button
+                        >&nbsp
+                        <button
+                            id="2"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q2</button
+                        ><br /><br />
+                        <button
+                            id="3"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q3</button
+                        >&nbsp
+                        <button
+                            id="4"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q4</button
+                        ><br /><br />
+                        <button
+                            id="5"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q5</button
+                        >&nbsp
+                        <button
+                            id="6"
+                            style="
+                                height: 70px;
+                                width: 70px;
+                                border-radius: 50%;
+                            "
+                        >
+                            Q6
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+</html>
